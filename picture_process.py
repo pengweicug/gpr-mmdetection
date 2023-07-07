@@ -35,6 +35,8 @@ class LongPictureProcess:
       i=i+1
   #图片缝合函数
   def joint(self,img_path:str):
+    model = init_detector(config_file, checkpoint_file, device='cuda:0')
+    result = inference_detector(model, img)
 
 
 
